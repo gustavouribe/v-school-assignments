@@ -1,0 +1,104 @@
+@font-face {
+    font-family: testFont;
+    src: url('font/SuperMario256.ttf');
+  }
+  
+  .container {
+    display: flex;
+    font-family: testFont;
+    align-items: center;
+    justify-content: center;
+   
+  }
+  
+  .header {
+    background-color: yellow;
+    text-align: center;
+    height: auto;
+    
+    
+  }
+  
+  .main-window {
+    background-color: red;
+    height: auto;
+    justify-content: space-around;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .header h1 {
+    margin: 30px;
+    font-size: 5em;
+    
+
+  }
+
+  .boxes {
+    display: flex;
+    flex-direction: column;
+    height: 340px;
+    width: 250px;
+    
+    background-color: rgb(255, 255, 255);
+    border: 3px solid black;
+    margin: 30px;
+
+  }
+  
+  .about-me {
+    flex-direction: column;
+  }
+  
+  .about-me p:nth-child(2) {
+     width: 200px;
+     text-align: center;
+     color: red;
+  }
+
+  #total{
+    font-size: 4em;
+    margin: 20px;
+    font-family: testFont;
+    background-color: red;
+    border: none;
+    color: white;
+    cursor: pointer;
+
+
+  }
+
+  a.menu_links { cursor: pointer; }
+
+  .footer p:nth-child(1) {
+    width: auto;
+    text-align: center;
+    color: red;
+ }
+
+ .img{
+   width: 180px;
+   height: 200px;
+   margin: 20px;
+ }
+
+ .inputs{
+  font-family: testFont;
+  font-size: 1.5em;
+  width: 50px;
+  height: auto;
+ }
+
+ #totalDisplay{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   
+   border: 3px solid black;
+   width: 300px;
+   height: 200px;
+   background-color: white;
+   margin: 20px;
+   font-size: 8em;
+
+ }

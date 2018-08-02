@@ -1,0 +1,24 @@
+h1 {
+    color: darkgreen;
+    font-family: "Georgia";
+    text-align: center
+}
+
+h2 {
+    font-family: "Georgia";
+    text-align: center
+}
+
+
+
+p {
+    line-height: 25px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+#lastLine{
+    text-transform: uppercase;
+}

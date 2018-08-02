@@ -1,0 +1,212 @@
+*, html {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    
+}
+
+/* .container header {
+    display: flex;
+    height: 300px;
+    /* min-width: 700px; 
+    width: 100%;
+    background-color: black;
+    
+} */
+.header {
+    height: auto;
+}
+
+.headerWrapper {
+    height: auto;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+    margin: 30px;
+}
+.headerMenu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100%;
+    margin: 30px;
+    
+    width: 70%;
+    
+}
+
+.indexImg {
+    height: 100%;
+    width: 100%;
+}
+#img2 {
+    display: none;
+}
+
+
+/* .headerWrapper:nth-child(3){
+    flex-direction: row;
+    justify-content: flex-end;
+} */
+#title{
+    padding: 20px;
+}
+.menuIcon{
+    font-size: 3em;
+    color: white;
+    margin: 10px;
+    
+}
+.container main {
+    height: 1000px;
+    /* min-width: 700px; */
+    width: 100%;
+    background-color: lightgrey;
+    display: flex;
+    
+}
+.container footer {
+    height: 50px;
+    /* min-width: 700px; */
+    width: 100%;
+    background-color: black;
+    display: flex;
+    
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3em;
+    color: white;
+}
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    color: black;
+}
+.mainText {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    color: black;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+
+}
+
+.linkText{
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    color: white;
+    
+}
+a:link {
+    text-decoration: none;
+}
+
+a:hover { 
+    color: rgb(138, 11, 11);
+}
+
+
+/* copy impact hub layout with menu
+https://impacthub.net/ */
+
+
+
+/* ------------ */
+.slider-container {
+    position: relative; 
+    display: flex;
+}
+.slider-container .slider-parent {
+    height: 100vh;
+    
+    max-width: 200px;
+    width: 100%;
+    background: black;
+    position: absolute;
+    left: -250px;
+    /* top: 50px; */
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: .2s all linear; 
+}
+
+.slider-container .slider-parent.active {
+    visibility: visible;
+    pointer-events: inherit;
+    transition: .2s all ease-in-out;
+    opacity: 1;
+    left: 0; 
+}
+
+.slider-trigger{
+    display: none;
+}
+
+sideIcons{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+@media only screen and (max-width: 700px){
+
+    .headerMenu,
+    .headerMenu > a {
+        display: none;
+    }
+
+    .slider-trigger {
+        display: inline-block;
+    }
+
+
+    .headerWrapper {
+        flex-direction: row;
+        justify-content: center;
+        height: 300px;
+        
+    }
+
+    h1 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 2em;
+        color: white;
+        display:none;
+    }
+
+    .logo {
+        width: 120px;
+        height: 120px;
+        padding-top: 5px;
+        
+    }
+
+    sideIcons{
+        display: flex;
+        flex-direction: row wrap;
+        
+    }
+    /* .img2{
+        display: flex;
+    } */
+
+} 

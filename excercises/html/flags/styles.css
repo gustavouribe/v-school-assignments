@@ -1,0 +1,321 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-size: 0px;
+}
+
+
+#container {
+background-color: grey;
+}
+
+.flagTemplate {
+width: 500px;
+height: 300px;
+border: 5px;
+border-style: solid;
+border-width: 5px;
+display: inline-block;
+float: left;
+
+/*   background-color: black; */
+}
+
+.oneThirdsVertical {
+width: 33.33%;
+height: 100%;
+float: left;
+display: inline-block;
+position: relative;
+}
+.oneThirdsHorizontal {
+width: 100%;
+height: 33.33%;
+float: right;
+position: relative;
+}
+.twoThirdsHorizontal {
+width: 66.66%;
+height: 50%;
+float: right;
+position: relative;
+display: inline-block;
+}
+
+#france1 {
+background-color: blue;
+}
+#france2 {
+background-color: white;
+}
+#france3 {
+background-color: red;
+}
+
+#germany1 {
+background-color: black;
+}
+#germany2 {
+background-color: red;
+}
+#germany3 {
+background-color: yellow;
+}
+
+#madagascar1 {
+background-color: white;
+}
+#madagascar2 {
+background-color: red;
+}
+#madagascar3 {
+background-color: green;
+}
+
+
+#swiss1 {
+background-color: red;
+}
+
+#swissCrossH {
+position: relative;
+background-color: white;
+width: 200px;
+height: 50px;
+top: 40%;
+left: 30%;
+
+}
+
+#swissCrossV {
+position: relative;
+background-color: white;
+width: 50px;
+height: 200px;
+left: 45%;
+}
+
+#gambia1 {
+background-color: red;
+}
+#gambia2 {
+background-color: blue;
+border-top: 10px solid white;
+border-bottom: 10px solid white;
+}
+#gambia3 {
+background-color: green;
+}
+
+#tongaContainer{
+background-color: red;
+}
+
+.leftCornerContainer{
+    width: 40%;
+    height: 50%;
+    position: relative;
+    }
+
+#tongaBox{
+background-color: white;
+}
+
+#tongaCrossH {
+position: relative;
+background-color: red;
+width: 110px;
+height: 40px;
+top: 35%;
+left: 21%;
+
+}
+
+#tongaCrossV {
+position: relative;
+background-color: red;
+width: 40px;
+height: 110px;
+bottom: 17%;
+left: 39%;
+}
+
+#japanContainer{
+    background-color: white;
+}
+
+#japanCircle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+    top: 25%;
+    left: 35%;
+}
+
+#greeceContainer{
+    background-color: blue;
+}
+
+.bars{
+    height: 11.11%;
+    width: 100%;
+    float: left;
+    display: inline-block;
+
+    
+}
+.barsTop{
+    height: 11.11%;
+    width: 60%;
+    float: left;
+    display: inline-block;
+    
+}
+
+#white {
+    background-color: white
+}
+
+#blue {
+    background-color: blue
+}
+
+/* #greeceBox{
+    width: 40%;
+    height: 50%;
+    position: relative;
+    bottom: 50%
+    } */
+
+.greeceCorner{
+    width: 40%;
+    height: 55.63%;
+    position: relative;
+    background-color: white;
+    float: left;
+    display: inline-block;
+    }
+
+.greekCrossH{
+    height: 20%;
+    width: 100%;
+    float: left;
+    top: 40%;
+    display: inline-block;
+    position: relative;
+}
+.greekCrossV{
+    height: 100%;
+    width: 18%;
+    float: left;
+    left: 40%;
+    bottom: 20%;
+    display: inline-block;
+    position: relative;
+}
+
+#niger1{
+    background-color: orangered;
+}
+
+#niger2{
+    background-color: white;
+}
+
+#niger3{
+    background-color: green;
+}
+#nigerCircle{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background-color: orangered;
+    border-radius: 50%;
+    display: inline-block; 
+    top: 8%;
+    left: 40%; 
+}
+
+#maldivesContainer{
+    background-color: red;
+}
+
+#maldivesBox{
+    background-color: green;
+    position: relative;
+    width: 70%;
+    height: 60%;
+    top: 20%;
+    left: 15%;
+
+}
+
+#maldivesCircle{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block; 
+    top: 25px;
+    left: 120px; 
+    
+}
+#maldivesCircle2{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: green;
+    border-radius: 50%;
+    display: inline-block; 
+    top: 25px;
+    left: 140px;
+}
+
+#belizeContainer{
+    background-color: blue;
+    
+ 
+    /* display: inline-block;
+    position: relative; */
+}
+.belizeBar{
+    background-color: red;
+    width: 100%;
+    height: 10%;
+    display: block;
+    position: relative;
+}
+
+.belizeBox{
+    background-color: white;
+    width: 200px;
+    height: 180px;
+    top: 9%;
+    left: 30%;
+    display: block;
+    position: relative;
+    border-radius: 50%;
+
+}
+
+.belizeBar2{
+    background-color: red;
+    width: 100%;
+    height: 10%;
+    display: block;
+    top: 18%;
+    position: relative;
+}
+
+#belizeImg{
+    position: relative;
+    width: 90%;
+    height: 90%;
+    top: 10px;
+    left: 9px;
+}

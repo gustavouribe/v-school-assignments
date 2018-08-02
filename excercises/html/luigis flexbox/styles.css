@@ -1,0 +1,30 @@
+@font-face {
+    font-family: testFont;
+    src: url('font/SuperMario256.ttf');
+  }
+  
+  .container {
+    display: flex;
+    font-family: testFont;
+    align-items: center;
+  }
+  
+  .header {
+    background-color: yellow;
+    padding-left: 20px;
+    height: 60px;
+  }
+  
+  .header h1 {
+    margin: 0
+  }
+  
+  .about-me {
+    flex-direction: column;
+  }
+  
+  .about-me p:nth-child(2) {
+     width: 200px;
+     text-align: center;
+     color: red;
+  }

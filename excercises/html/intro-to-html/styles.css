@@ -1,0 +1,11 @@
+
+/* class multiple times */
+.name{
+    font-display: 30px;
+}
+
+/* id only be used once for specific things */
+#name{
+    background-color: blueviolet;
+}
+

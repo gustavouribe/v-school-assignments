@@ -1,0 +1,38 @@
+.container {
+    border: 5px black solid;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px, 100px, auto;
+
+}
+header {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+}
+
+#items{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;
+    grid-column: 1/-1;
+}
+.todoItem {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+#deleteBtn {
+    display: grid;
+    background-color: red;
+    
+    
+}

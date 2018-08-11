@@ -1,0 +1,57 @@
+.container{
+    display: grid;
+    grid-template-columns:  repeat(3, 1fr);
+    grid-template-rows: 50px auto 100px;
+    background-color: rgb(43, 153, 226);
+    color: white;
+    font-size: 1.4em;
+}
+
+header{
+    grid-column: 1/-1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.sideBar{
+    margin: auto;
+}
+
+.imgs{
+    width: 250px;
+    height: 250px;
+    
+}
+/*----------------------------------------------------FORM     */
+
+form{
+    margin: auto;
+   
+}
+formTop{
+   
+      
+}
+
+
+ul{
+    display: flex;
+    flex-direction: column;
+   
+}
+.inputs{
+    font-size: 1.2em;
+}
+
+input[type=checkbox] {width:20px; height:20px;}
+.fas.fa-bars {
+    padding: 5px;
+    /* visibility: hidden; */
+}
+
+ul {
+    list-style: none;
+  }
+

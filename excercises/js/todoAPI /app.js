@@ -9,42 +9,45 @@ axios.get('https://api.vschool.io/gustavouribe/todo').then(function(response){
 })
 
 
-
-function displayData(data){
+function displayElements(data){
     var display = document.getElementById('items');
     var parent, button, div, todo;
 
+    parent = document.createElement('div');
+    todo = data;
+    
+    button = document.createElement("button");
+    button.setAttribute('data-id', todo._id)
+    button.className = 'delete-button';
+    button.innerHTML = 'delete';
+    parent.appendChild(button);
+    
+    var div = document.createElement('div')
+    div.textContent = data.title
+    parent.appendChild(div)
+    var div = document.createElement('div')
+    div.textContent = data.price
+    parent.appendChild(div)
+    var div = document.createElement('div')
+    div.textContent = data.description
+    parent.appendChild(div)
+    var div = document.createElement('div')
+    div.textContent = data.completed
+    parent.appendChild(div)
+    var div = document.createElement('div')
+    div.textContent = data.imgUrl
+    parent.appendChild(div)
+    parent.setAttribute('class', 'todoItem')
+
+    display.appendChild(parent)
+
+}
+
+
+
+function displayData(data){
     for(var i = 0; i < data.length; i++){
-        parent = document.createElement('div');
-        todo = data[i];
-        
-        button = document.createElement("button");
-        button.setAttribute('data-id', todo._id)
-        button.className = 'delete-button';
-        button.innerHTML = 'delete';
-        parent.appendChild(button);
-        
-        var div = document.createElement('div')
-        div.textContent = data[i].title
-        parent.appendChild(div)
-        var div = document.createElement('div')
-        div.textContent = data[i].price
-        parent.appendChild(div)
-        var div = document.createElement('div')
-        div.textContent = data[i].description
-        parent.appendChild(div)
-        var div = document.createElement('div')
-        div.textContent = data[i].completed
-        parent.appendChild(div)
-        var div = document.createElement('div')
-        div.textContent = data[i].imgUrl
-        parent.appendChild(div)
-        parent.setAttribute('class', 'todoItem')
-
-
-        display.appendChild(parent)
-
-
+        displayElements(data[i])
     }
  }
 
@@ -73,6 +76,37 @@ console.log(newTodo)
 
 axios.post('https://api.vschool.io/gustavouribe/todo', newTodo).then(function(response){  
     console.log(response.data);
+    displayElements(response.data)
+
+    // parent = document.createElement('div');
+    // todo = response.data;
+    
+    // button = document.createElement("button");
+    // button.setAttribute('data-id', todo._id)
+    // button.className = 'delete-button';
+    // button.innerHTML = 'delete';
+    // parent.appendChild(button);
+    
+    // var div = document.createElement('div')
+    // div.textContent = data[i].title
+    // parent.appendChild(div)
+    // var div = document.createElement('div')
+    // div.textContent = data[i].price
+    // parent.appendChild(div)
+    // var div = document.createElement('div')
+    // div.textContent = data[i].description
+    // parent.appendChild(div)
+    // var div = document.createElement('div')
+    // div.textContent = data[i].completed
+    // parent.appendChild(div)
+    // var div = document.createElement('div')
+    // div.textContent = data[i].imgUrl
+    // parent.appendChild(div)
+    // parent.setAttribute('class', 'todoItem')
+
+    // display.appendChild(parent)
+
+
   }).catch(function(error){
     console.log(error)
   });
@@ -112,7 +146,10 @@ axios.post('https://api.vschool.io/gustavouribe/todo', newTodo).then(function(re
 
 
 
-
+// on click
+    //delete function
+        
+    //display todo
 
 
 

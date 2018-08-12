@@ -17,6 +17,7 @@ h1 {
     grid-gap: 3px;
     max-width: 600px;
     margin: auto;
+    color: white;
 }
 
 .ex1 > div {
@@ -53,6 +54,7 @@ h1 {
     width: 300px;
     max-width: 600px;
     margin: auto;
+    color: white;
 }
 .ex2 > div {
     border-radius: 3%;
@@ -94,7 +96,7 @@ h1 {
     align-content: center;
     margin: auto;
     max-width: 600px;
-    
+    color: white;
 
 }
 
@@ -102,11 +104,13 @@ h1 {
     background-color: blue;
     height: 100px;
     width: 100px;
+    border-radius: 10%;
 }
 .red {
     background-color: red;
     height: 100px;
     width: 100px;
+    border-radius: 10%;
 }
 
 .ex4 {
@@ -115,6 +119,7 @@ h1 {
     grid-gap: 10px;
     max-width: 600px;
     margin: auto;
+    
 
 }
 

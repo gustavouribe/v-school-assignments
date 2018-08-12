@@ -1,7 +1,8 @@
 
 
 axios.get('https://api.vschool.io/gustavouribe/todo').then(function(response){
-    displayData(response.data)
+    displayData(response.data);
+    bindDeleteTodo();
 
 }).catch(function(err){
     console.log(err)
@@ -10,14 +11,18 @@ axios.get('https://api.vschool.io/gustavouribe/todo').then(function(response){
 
 
 function displayData(data){
-    var display = document.getElementById('items')
+    var display = document.getElementById('items');
+    var parent, button, div, todo;
+
     for(var i = 0; i < data.length; i++){
-        var parent = document.createElement('div')
+        parent = document.createElement('div');
+        todo = data[i];
         
-        var button = document.createElement("button");
-        button.setAttribute('id', 'deleteBtn')
+        button = document.createElement("button");
+        button.setAttribute('data-id', todo._id)
+        button.className = 'delete-button';
         button.innerHTML = 'delete';
-        parent.appendChild(button)
+        parent.appendChild(button);
         
         var div = document.createElement('div')
         div.textContent = data[i].title
@@ -38,8 +43,7 @@ function displayData(data){
 
 
         display.appendChild(parent)
-         // parent.appendChild(button)
-         // add a delete button to html <button>delete</button>
+
 
     }
  }
@@ -74,24 +78,37 @@ axios.post('https://api.vschool.io/gustavouribe/todo', newTodo).then(function(re
   });
 })
 
-document.getElementById("deleteBtn").addEventListener("click", function(){
-    // document.getElementById("demo").innerHTML = "Hello World";
-    console.log('my delete function button works')
-});
 
-var deleteTodo = function(singleTodoObject) {
-    // This "singleTodoObject" I passed in has an attribute "_id" I can use to delete it
-    // I just need to add that "_id" to the end of my URL to which I'm sending this DELETE request
-        axios.delete("https://api.vschool.io/gustavouribe/todo/" + singleTodoObject._id).then(function(response) {
-            // This made a DELETE request to "https://api.vschool.io/jonsmith/todo/5630dcfcac2dfab2428b8c02"
-            // Assuming I used the object from the example above.
-            alert("Your todo was successfully deleted!")
-        }, function(response) {
-            alert("There was a problem deleting your todo :(");
-        });
+
+    function deleteTodo(todoId) {
+        return axios.delete("https://api.vschool.io/gustavouribe/todo/" + todoId );
     };
 
 
+
+    function bindDeleteTodo() {
+        var parent = document.getElementById('items');
+
+        parent.addEventListener('click', function filterButton(e) {
+            var elm = e.target;
+            var todoId;
+            
+            if (elm.className == 'delete-button') {
+                todoId = elm.getAttribute('data-id');
+                
+                // delete the todo and then remove todo from the DOM
+                deleteTodo(todoId)
+                .then(function() {
+                    elm.parentNode.parentNode.removeChild(elm.parentNode);
+                    alert('Successfully deleted todo ' + todoId)
+                })
+                .catch(function(e) {
+                    alert('There was an error deleting your todo');
+                });
+                
+            }
+        })
+    }
 
 
 

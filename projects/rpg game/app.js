@@ -14,15 +14,15 @@ var player = {
     // put in attack() method
         // if weapons arr is >= 1
             if (player.weapons.length >= 1){
-                for (var i = 0; i <= player.weapons.length; i++){
-                    if (player.weapons.length[i] === 'knife'){
+                // create a random num between 0 and player.weapons.length
+                var weaponsChance = Math.floor(Math.random() * player.weapons.length)
+                    if (player.weapons[weaponsChance] === 'knife'){
                         console.log("you used your knife attack")
                         return Math.floor(Math.random() * 60 * 1)
-                    } else if (player.weapons.length[i] === 'gun'){
+                    } else if (player.weapons[weaponsChance] === 'gun'){
                         console.log("you used your gun attack")
                         return Math.floor(Math.random() * 40 * 1)
-                    }
-                }
+                    } 
             } 
         return Math.floor(Math.random() * 20 * 1)
     },

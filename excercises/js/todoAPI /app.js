@@ -1,55 +1,91 @@
 
 
-axios.get('https://api.vschool.io/gustavouribe/todo').then(function(response){
-    displayData(response.data);
-    bindDeleteTodo();
+// axios.get('https://api.vschool.io/gustavouribe/todo').then(function(response){
+//     displayElements(response.data);
+//     // bindDeleteTodo();
 
-}).catch(function(err){
-    console.log(err)
-})
+// }).catch(function(err){
+//     console.log(err)
+// })
+
+var allTodos = []
+
+
+
+function getTodos(){
+
+axios.get('https://api.vschool.io/gustavouribe/todo').then(function(response){
+    
+            allTodos = response.data
+            displayElements(allTodos);
+            // bindDeleteTodo();
+
+        }).catch(function(err){
+            console.log(err)
+        })
+}
+
+getTodos()
+
+
 
 
 function displayElements(data){
+    console.log(data.length)
     var display = document.getElementById('items');
-    var parent, button, div, todo;
+    display.innerHTML = '';
+    for(var i = 0; i < data.length; i++){
+        var parent, button, div;
 
-    parent = document.createElement('div');
-    todo = data;
-    
-    button = document.createElement("button");
-    button.setAttribute('data-id', todo._id)
-    button.className = 'delete-button';
-    button.innerHTML = 'delete';
-    parent.appendChild(button);
-    
-    var div = document.createElement('div')
-    div.textContent = data.title
-    parent.appendChild(div)
-    var div = document.createElement('div')
-    div.textContent = data.price
-    parent.appendChild(div)
-    var div = document.createElement('div')
-    div.textContent = data.description
-    parent.appendChild(div)
-    var div = document.createElement('div')
-    div.textContent = data.completed
-    parent.appendChild(div)
-    var div = document.createElement('div')
-    div.textContent = data.imgUrl
-    parent.appendChild(div)
-    parent.setAttribute('class', 'todoItem')
+        parent = document.createElement('div');        
+        button = document.createElement("button");
+        button.setAttribute('id', data[i]._id)
+        button.className = 'delete-button';
+        button.innerHTML = 'delete';
+        button.addEventListener('click', function(){
+           deleteTodo(this.id)
+        })
 
-    display.appendChild(parent)
+        parent.appendChild(button);
+        
+        // checkbox.addEventListener('checkthebox', function(){
+        //     if(data.completed === true){
+        //         checkboxitem.style.textDecoration = line through
+        //     }else{
+        //         checkboxitem.style = no line through
+        //     }
+        // })
 
+
+        var div = document.createElement('div')
+        div.textContent = "title: "
+        div.classList.add("objectTitle")
+        div.innerHTML = `<span class='objectTitle'>title:</span>`+' '+`<span class='contentTitle'>${data[i].title}</span>`
+        parent.appendChild(div)
+        var div = document.createElement('div')
+        div.innerHTML = `<span class='objectTitle'>price:</span>`+' '+`<span class='contentTitle'>${data[i].price}</span>`
+        parent.appendChild(div)
+        var div = document.createElement('div')
+        div.textContent = data[i].description
+        div.innerHTML = `<span class='objectTitle'>description:</span>`+' '+`<span class='contentTitle'>${data[i].description}</span>`
+        parent.appendChild(div)
+        var div = document.createElement('div')
+        div.innerHTML = `<span class='objectTitle'>completed:</span>`+' '+`<span class='contentTitle'>${data[i].completed}</span>`
+        parent.appendChild(div)
+        var div = document.createElement('div')
+        div.textContent = data[i].imgUrl
+        parent.appendChild(div)
+
+        // box around objects
+        parent.setAttribute('class', 'todoItem')
+        // display all objects
+        display.appendChild(parent)
+    }
 }
 
 
 
-function displayData(data){
-    for(var i = 0; i < data.length; i++){
-        displayElements(data[i])
-    }
- }
+
 
 
 var form = document.formTodo
@@ -76,35 +112,9 @@ console.log(newTodo)
 
 axios.post('https://api.vschool.io/gustavouribe/todo', newTodo).then(function(response){  
     console.log(response.data);
+    getTodos()
     displayElements(response.data)
 
-    // parent = document.createElement('div');
-    // todo = response.data;
-    
-    // button = document.createElement("button");
-    // button.setAttribute('data-id', todo._id)
-    // button.className = 'delete-button';
-    // button.innerHTML = 'delete';
-    // parent.appendChild(button);
-    
-    // var div = document.createElement('div')
-    // div.textContent = data[i].title
-    // parent.appendChild(div)
-    // var div = document.createElement('div')
-    // div.textContent = data[i].price
-    // parent.appendChild(div)
-    // var div = document.createElement('div')
-    // div.textContent = data[i].description
-    // parent.appendChild(div)
-    // var div = document.createElement('div')
-    // div.textContent = data[i].completed
-    // parent.appendChild(div)
-    // var div = document.createElement('div')
-    // div.textContent = data[i].imgUrl
-    // parent.appendChild(div)
-    // parent.setAttribute('class', 'todoItem')
-
-    // display.appendChild(parent)
 
 
   }).catch(function(error){
@@ -115,41 +125,41 @@ axios.post('https://api.vschool.io/gustavouribe/todo', newTodo).then(function(re
 
 
     function deleteTodo(todoId) {
-        return axios.delete("https://api.vschool.io/gustavouribe/todo/" + todoId );
+        axios.delete("https://api.vschool.io/gustavouribe/todo/" + todoId).then(function(response){
+            console.log(response.data)
+            getTodos()
+        });
+        
     };
 
 
 
-    function bindDeleteTodo() {
-        var parent = document.getElementById('items');
+    // function bindDeleteTodo() {
+    //     var parent = document.getElementById('items');
 
-        parent.addEventListener('click', function filterButton(e) {
-            var elm = e.target;
-            var todoId;
+    //     parent.addEventListener('click', function filterButton(e) {
+    //         var elm = e.target;
+    //         var todoId;
             
-            if (elm.className == 'delete-button') {
-                todoId = elm.getAttribute('data-id');
+    //         if (elm.className == 'delete-button') {
+    //             todoId = elm.getAttribute('data-id');
                 
-                // delete the todo and then remove todo from the DOM
-                deleteTodo(todoId)
-                .then(function() {
-                    elm.parentNode.parentNode.removeChild(elm.parentNode);
-                    alert('Successfully deleted todo ' + todoId)
-                })
-                .catch(function(e) {
-                    alert('There was an error deleting your todo');
-                });
+    //             // delete the todo and then remove todo from the DOM
+    //             deleteTodo(todoId)
+    //             .then(function() {
+    //                 elm.parentNode.parentNode.removeChild(elm.parentNode);
+    //                 alert('Successfully deleted todo ' + todoId)
+    //             })
+    //             .catch(function(e) {
+    //                 alert('There was an error deleting your todo');
+    //             });
                 
-            }
-        })
-    }
+    //         }
+    //     })
+    // }
 
 
 
-// on click
-    //delete function
-        
-    //display todo
 
 
 

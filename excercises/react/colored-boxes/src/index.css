@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.red {
+  background-color: red;
+  display: grid;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+.titleWrap{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}

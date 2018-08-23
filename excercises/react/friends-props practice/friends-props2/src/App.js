@@ -51,7 +51,7 @@ const App = () => {
         }]
     }]
 
-    const displayFriends= frinds.map((friend, i) => {
+    const displayFriends= friends.map((friend, i) => {
         return <Friend key={friend.name+i}
                         name={friend.name}
                         age={friend.age}
@@ -65,7 +65,7 @@ const App = () => {
             {displayFriends}
         </div>
     )
-
+  }
     export default App;
 
 

@@ -1,0 +1,19 @@
+{
+    "heroes": [
+        {
+            "name": "Spider Man",
+            "image": "https://static.comicvine.com/uploads/original/4/49448/1667459-spidermanffspiderman.gif",
+            "catchPhrase": "My spidy-sense is tingling"
+        },
+        {
+            "name": "Wolverine",
+            "image": "image url goes here",
+            "catchPhrase": "Let's go bub..."
+        },
+        {
+            "name": "Hulk",
+            "image": "image url goes here",
+            "catchPhrase": "Hulk SMASH!!!!!"
+        }
+    ]
+}

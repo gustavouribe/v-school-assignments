@@ -1,0 +1,33 @@
+
+@font-face {
+    font-family: 'godfather';
+    src: url('./TheGodfather-v2.ttf'); 
+}
+
+h1{
+    color: white;
+    font-size: 5em;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+.header {
+    background-color: darkgrey;
+    font-family: 'godfather';
+}
+.content{
+    background-color: darkgrey;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(325px, 1fr) );
+    grid-template-rows: auto;
+    justify-items: center;
+
+    
+    
+}
+.imgClass{
+    width: 200px;
+}

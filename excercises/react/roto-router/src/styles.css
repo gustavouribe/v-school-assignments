@@ -1,0 +1,113 @@
+@font-face {
+    font-family: marioFont;
+    src: url('font/SuperMario256.ttf');
+  }
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 500px 100px;
+}
+
+.navbar{
+    background-color: red;
+    font-family: marioFont;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 2em;
+    color: white;
+    
+}
+
+a:link {
+    color:white;
+    text-decoration: none;
+}
+a:visited {
+    color:white;
+    text-decoration: none;
+}
+
+
+
+
+
+.home{
+    background-color: white;
+    font-family: marioFont;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    margin: 60px;
+    
+
+}
+
+.about{
+    background-color: grey;
+}
+
+.pageTemplate{
+    background-color: white;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    max-width: 800px;
+    margin: auto;
+
+}
+
+.contact{
+    background-color: white;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    max-width: 800px;
+    margin: auto;
+
+}
+
+.contactPic{
+    width: 300px;
+    /* grid-column: 2 / 3; */
+}
+
+.services{
+    background-color: grey;
+}
+
+
+
+.footer{
+    background-color: rgba(1, 99, 1, 0.459);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .navbar{
+        flex-direction: column;
+        font-size: 1.2em;
+        height: 120px;
+        
+    }
+
+    .pageTemplate{
+        background-color: white;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        max-width: 800px;
+        margin: auto;
+    
+    }
+
+
+
+
+}

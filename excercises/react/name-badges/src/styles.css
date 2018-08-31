@@ -1,0 +1,75 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+}
+
+.form {
+    background-color: orange;
+    border-radius: 20px;
+    width: 700px;
+  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    margin: auto;
+
+
+}
+
+.formRows{
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-evenly;
+    grid-gap: 20px;
+    padding: 5px;
+
+}
+.formInputs{
+    width: 300px;
+}
+.formArea{
+    justify-self: center;
+    padding: 5px;
+}
+.formText{
+    width: 620px;
+    height: 200px;
+}
+.formButton{
+    justify-self: center;
+    padding: 10px;
+}
+.btn{
+
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.badge {
+    background-color: black;
+    border-radius: 20px;
+    width: 700px;
+  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    margin: auto;
+    color: white;
+
+
+}
+.badgeRows{
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-evenly;
+    grid-gap: 20px;
+    padding: 5px;
+
+}
+.badgeOutputs{
+    width: 300px;
+}

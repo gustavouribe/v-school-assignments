@@ -15,6 +15,7 @@ class Controls extends Component {
         this.state = {
             status: true
         }
+
     }
 
     
@@ -45,27 +46,64 @@ class Controls extends Component {
             }
         })
     }
+
     
+    openFullscreen = () => {
+        var elem = document.documentElement;
+
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+        } else if (elem.mozRequestFullScreen) { /* Firefox */
+          elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+          elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) { /* IE/Edge */
+          elem.msRequestFullscreen();
+        }
+      }
+
+
+    closeFullscreen = () => {
+    if (document.exitFullscreen) {
+        document.exitFullscreen();
+    } else if (document.mozCancelFullScreen) { /* Firefox */
+        document.mozCancelFullScreen();
+    } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+        document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) { /* IE/Edge */
+        document.msExitFullscreen();
+    }
+    }
+
+    maximize = () => {
+        this.openFullscreen()
+        this.toggle()
+    }
+
+    minimize = () => {
+        this.closeFullscreen()
+        this.toggle()
+    }
+
     render () {
-
-
-    
         return (
             <div className="controls">
                 <div className="controlWrapper">
-                    
-                    {/* <button className="startBtn" onClick={ start }>START</button>
-                    <button className="startBtn" onClick={ stop }>STOP</button>
-                    <button className="resetBtn" onClick={ this.props.resetTimer }>RESET</button>  */}
-                    {this.state.status ? 
-                    <button className="startBtn" onClick={ this.start }>START</button>
-                    :
-                    <button className="startBtn" onClick={ this.stop }>STOP</button>
-                    }
-                    <button className="resetBtn" onClick={ this.props.resetTimer }>RESET</button> 
-                    <div>
-                        <img class="icons" src={maxFullScreen} alt="max screen"/>
-                        <img class="icons" src={minFullScreen} alt="max screen"/>
+                    <div className="controlWrapper start">
+                        {this.state.status ? 
+                        <button className="startBtn" onClick={ this.start }>START</button>
+                        :
+                        <button className="startBtn" onClick={ this.stop }>STOP</button>
+                        }
+                        <button className="resetBtn" onClick={ this.props.resetTimer }>RESET</button> 
+                    </div>
+
+                    <div className="controlWrapper end">
+                        {this.state.status ? 
+                        <img class="icons" src={maxFullScreen} alt="max screen" onClick={ this.maximize }/>
+                        :
+                        <img class="icons" src={minFullScreen} alt="max screen" onClick={ this.minimize }/>
+                        }
                     </div>
                    
                 </div>

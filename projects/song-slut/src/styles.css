@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://use.fontawesome.com/releases/v5.3.1/css/all.css');
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    /* justify-items: center; */
+    background-color: rgba(0, 0, 0, 0.836);
+}
+
+header{
+    display: grid;
+    justify-items: left;
+    padding-left: 10%;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
+}
+
+h1{
+    margin-bottom: 0%;
+}
+h2{
+    margin-top: 2%;
+}
+
+
+form{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.navBar{
+    width: 50%;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    color: white;
+    text-decoration: none;
+}
+
+.fas.fa-search{
+    color:white;
+}

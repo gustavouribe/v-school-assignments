@@ -1,0 +1,40 @@
+.container {
+    display: grid;
+   justify-items: center; 
+   
+}
+
+header{
+
+}
+
+form {
+    
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+
+}
+
+@media only screen and (max-width: 500px) {
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.infoWrapper{
+    /* background-color: limegreen; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+h2{
+    margin: 0px;
+    padding-top: 10px;
+}
+
+.img {
+    width: 300px;
+}

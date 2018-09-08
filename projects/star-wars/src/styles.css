@@ -1,0 +1,216 @@
+@font-face {
+    font-family: 'jedi';
+    src: url('./fonts/Starjedi.ttf'); 
+}
+@font-face {
+    font-family: 'force';
+    src: url('./fonts/SerifGothicStd-Black.otf'); 
+}
+
+
+/* /////////////------------------HEADER */
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #000 url(//cssanimation.rocks/demo/starwars/images/bg.jpg);
+    height: 300px;
+    width: 100%;
+}
+
+.title{
+    font-family: 'jedi';
+    font-size: 4em;
+    color: black;
+    text-shadow: -2px 0 yellow, 0 2px yellow, 2px 0 yellow, 0 -2px yellow;
+    padding: 0px;
+    margin: 0px;
+
+    
+}
+.title2{
+    font-family: 'jedi';
+    font-size: 4em;
+    color: black;
+    text-shadow: -2px 0 yellow, 0 2px yellow, 2px 0 yellow, 0 -2px yellow;
+    padding: 0px;
+    margin: 0px;
+    display: none;
+    
+}
+
+
+.subTitle{
+    font-family: 'force';
+    font-size: 1.5em;    
+    color: white; 
+    /* letter-spacing: 5px; */
+    padding: 0px;
+    margin: 0px;
+}
+.subTitle2{
+    font-family: 'force';
+    font-size: 1.5em;    
+    color: white; 
+    /* letter-spacing: 5px; */
+    padding: 0px;
+    margin: 0px;
+    display: none;
+}
+
+
+
+@media only screen and (min-width: 800px) and (max-width: 10000px) {
+    .subTitle{
+        letter-spacing: 10px;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 800px)  {
+    .subTitle{
+        letter-spacing: 5px;
+    }
+}
+@media only screen and (min-width: 550px) and (max-width: 600px) {
+    .subTitle{
+        letter-spacing: 3px;
+    }
+}  
+@media only screen and (min-width: 0px) and (max-width: 550px) {
+    .subTitle{
+        letter-spacing: 0px;
+    }
+}  
+@media only screen and (min-width: 450px) and (max-width: 550px) {
+    header{
+        height: 250px;
+    }
+    
+    .title{
+        
+        display: none;
+    } 
+    .title2{
+        font-size: 3em;
+        display: initial;
+    }
+    .subTitle{
+        letter-spacing: 0px;
+        display: none;
+    }
+   
+    .subTitle2{
+        letter-spacing: 0px;
+        text-align: center;
+        display: initial;
+    }
+
+
+}  
+
+@media only screen and (min-width: 0px) and (max-width: 450px) {
+    header{
+        height: 200px;
+    }
+    
+    
+    .title{
+        
+        display: none;
+    } 
+    .title2{
+        font-size: 2em;  
+        display: initial;    
+    }
+    .subTitle{
+        letter-spacing: 0px;
+        display: none;
+    }
+    .subTitle2{
+        font-size: .9em;
+        display: initial;
+        
+    }
+}
+
+
+/* /////////////------------------NAVBAR */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.navBar{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+}
+
+
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color:black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(97, 34, 156);
+    text-decoration: underline;
+}
+
+a:active {
+    color: rgb(97, 34, 156);
+    text-decoration: underline;
+}
+
+/* /////////////------------------HOME */
+.home{
+    margin: 0px;
+}
+
+
+
+
+
+
+/* /////////////------------------CONTENT */
+
+.contentWrapper {
+    display: flex;
+    direction: row;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.contentBoxes{
+    margin: 10px;
+    
+}
+
+/* /////////////------------------FOOTER */
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: #000 url(//cssanimation.rocks/demo/starwars/images/bg.jpg);
+    height: 100px;
+    width: 100%;
+    
+}
+
+.footerTitle{
+    font-family: 'force';
+    color: white;
+}
+
+.swapiTitle{
+    font-family: 'jedi';
+    text-shadow: -2px 0 yellow, 0 2px yellow, 2px 0 yellow, 0 -2px yellow;
+}

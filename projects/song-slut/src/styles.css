@@ -54,3 +54,20 @@ a:hover, a:visited, a:link, a:active
 .fas.fa-search{
     color:white;
 }
+
+.home{
+
+
+  
+    background-color: white; 
+}
+
+.searchList{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  
+    
+    
+  
+    font-size: 2em;
+}

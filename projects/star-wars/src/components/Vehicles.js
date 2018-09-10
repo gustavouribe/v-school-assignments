@@ -1,8 +1,26 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux';
 import {getVehicles} from '../redux';
+import VehiclesCard from './VehiclesCard'
+import sandCrawlerImg from '../assets/images/vehicles/4.jpg'
+import T16Img from '../assets/images/vehicles/6.jpg'
+import X34Img from '../assets/images/vehicles/7.jpg'
+import TIEImg from '../assets/images/vehicles/8.jpg'
+import snowSpeederImg from '../assets/images/vehicles/14.jpg'
+import tieBomberImg from '../assets/images/vehicles/16.jpg'
+import ATATImg from '../assets/images/vehicles/18.jpg'
+import ATSTImg from '../assets/images/vehicles/19.jpg'
+import stormIVImg from '../assets/images/vehicles/20.jpg'
+import sailBargeImg from '../assets/images/vehicles/24.jpg'
+
 
 class Vehicles extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {isToggleOn: true};
+    
+        // This binding is necessary to make `this` work in the callback
+      }
 
     componentDidMount(){
         this.props.getVehicles()
@@ -10,22 +28,30 @@ class Vehicles extends Component {
 
     render(){
         const mappedVehicles = this.props.vehicles.map(vehicles => {
-            return (
-                <div className="contentBoxes">
-                    <h2>{vehicles.name}</h2> 
-                    <span>model: {vehicles.model}</span> <br></br>
-                    <span>manufacturer: {vehicles.manufacturer}</span> <br></br>
-                    <span>cost in credits: {vehicles.cost_in_credits}</span> <br></br>
-                    <span>length: {vehicles.length}</span> <br></br>
-                    <span>max atmosphering speed: {vehicles.max_atmosphering_speed}</span> <br></br>
-                    <span>crew: {vehicles.crew}</span> <br></br>
-                    <span>passengers: {vehicles.passengers}</span> <br></br>
-                    <span>cargo capacity: {vehicles.cargo_capacity}</span> <br></br>
-                    <span>consumables: {vehicles.consumables}</span> <br></br>
-                    <span>vehicle class: {vehicles.vehicle_class}</span> <br></br>
-                </div>
-
-            )
+            let currentImg = ''
+            if (vehicles.name === "Sand Crawler"){
+                currentImg = sandCrawlerImg
+            } else if (vehicles.name === "T-16 skyhopper"){
+                currentImg = T16Img
+            } else if (vehicles.name === "X-34 landspeeder"){
+                currentImg = X34Img
+            } else if (vehicles.name === "TIE/LN starfighter"){
+                currentImg = TIEImg
+            } else if (vehicles.name === "Snowspeeder"){
+                currentImg = snowSpeederImg
+            } else if (vehicles.name === "TIE bomber"){
+                currentImg = tieBomberImg
+            } else if (vehicles.name === "AT-AT"){
+                currentImg = ATATImg
+            } else if (vehicles.name === "AT-ST"){
+                currentImg = ATSTImg
+            } else if (vehicles.name === "Storm IV Twin-Pod cloud car"){
+                currentImg = stormIVImg
+            } else if (vehicles.name === "Sail barge"){
+                currentImg = sailBargeImg
+            } 
+        
+            return <VehiclesCard currentImg={currentImg} {...vehicles}/>
     })
 
         return (

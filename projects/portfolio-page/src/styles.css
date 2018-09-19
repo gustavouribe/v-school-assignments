@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
+
+
+body {
+    background-color: black;
+    margin: 0;
+ }
+ 
+
+
+.container{
+    background-color: black;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+.header{
+    
+}
+.titleFont{
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 7em; 
+    letter-spacing: 10px;
+    margin-bottom: 10px;  
+    
+}
+
+@media only screen and (max-width: 750px){
+    .titleFont{
+        font-size: 6em; 
+        margin-bottom: 5px;  
+    }
+}
+@media only screen and (max-width: 680px){
+    .titleFont{
+        font-size: 5em; 
+    }
+}
+@media only screen and (max-width: 580px){
+    .titleFont{
+        font-size: 4em; 
+    }
+}
+.subTitleFont{
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'PT Sans', sans-serif;
+    letter-spacing: 10px;
+    /* font-size: 7em;    */
+    
+}
+
+.skills{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    margin: 10px;
+    text-align: center;
+}
+@media only screen and (max-width: 580px){
+    .skills{
+        margin: 3px; 
+    }
+}
+.skillsImages{
+    width: 50px;
+    height: 50px;
+}
+
+.eduWrapper{
+    display: flex;
+    justify-content: center;
+    /* margin: auto; */
+   
+}
+
+.eduBlock{
+    width: 300px;
+}
+
+.eduImages{
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+@media only screen and (min-width: 500px) and (max-width: 700px){
+    .eduBlock{
+        width: 200px;
+    }
+}
+
+
+@media only screen and (max-width: 500px){
+    .eduWrapper{
+        flex-direction: column;
+        margin: 10%;
+    }
+}
+
+
+
+
+.footerIcons{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: wrap;
+    font-size: 1.3em;
+}
+.footerText{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: wrap;
+    font-size: 1.3em;
+}
+
+@media only screen and (max-width: 600px){
+    .footerText{
+        flex-direction: column;
+        margin-left: 15%;
+        margin-right: 15%;
+        font-size: 1.1em;
+    }
+}
+@media only screen and (max-width: 400px){
+    .footerText{
+        flex-direction: column;
+        margin-left: 15%;
+        margin-right: 15%;        
+        font-size: 1em;
+    }
+}

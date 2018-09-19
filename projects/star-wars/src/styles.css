@@ -280,7 +280,18 @@ a:active {
     background-size: cover;
     background-repeat: no-repeat;
     float: left;
+    transition: width 2s, height 4s;
+
+
 }
+
+.contentBoxes:active {
+    
+    box-shadow: 0 5px rgb(97, 34, 156);
+    transform: translateY(4px);
+  }
+
+
 
 .contentBoxesFilm{
     /* justify-content: center; */
@@ -291,6 +302,12 @@ a:active {
     background-repeat: no-repeat;
     float: left;
     width: 400px;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 400px) {
+    .contentBoxesFilm{
+        width: 300px;
+    }
 }
 
 @media only screen and (min-width: 0px) and (max-width: 823px) {

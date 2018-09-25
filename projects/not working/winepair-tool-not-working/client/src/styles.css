@@ -1,0 +1,30 @@
+body {
+    background-color: white;
+    margin: 0;
+ }
+ 
+
+.container {
+    
+}
+.header{
+    display: flex;
+    justify-content: center;
+    font-size: 4em;
+    padding: 10px;
+}
+.search{
+    display: flex;
+    justify-content: center;
+    font-size: 4em;
+    padding: 10px;
+}
+.results{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    align-items: center;
+    margin: auto;
+
+}
+

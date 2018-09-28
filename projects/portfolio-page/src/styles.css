@@ -10,6 +10,7 @@ body {
  
 
 
+
 .container{
     background-color: black;
     color: white;
@@ -44,14 +45,53 @@ body {
         font-size: 4em; 
     }
 }
+
+
+
 .subTitleFont{
     display: flex;
     justify-content: flex-start;
     font-family: 'PT Sans', sans-serif;
     letter-spacing: 10px;
+    padding-left: 10px;
     /* font-size: 7em;    */
     
 }
+/* //////////////////////////////////////////////////////////////////// CONTENT */
+
+
+.contentWrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+     margin: auto;
+   
+}
+
+.contentBlock{
+     width: 300px; 
+}
+
+.contentImages{
+    background-color: white;
+    width: 250px;
+    height: 200px;
+    border-radius: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+/* //////////////////////////////////////////////////////////////////// SKILLS */
+
+
 
 .skills{
     display: flex;
@@ -69,6 +109,10 @@ body {
     width: 50px;
     height: 50px;
 }
+
+
+
+/* //////////////////////////////////////////////////////////////////// EDUCATION */
 
 .eduWrapper{
     display: flex;
@@ -102,7 +146,7 @@ body {
     }
 }
 
-
+/* //////////////////////////////////////////////////////////////////// FOOTER */
 
 
 .footerIcons{
@@ -110,7 +154,8 @@ body {
     display: flex;
     justify-content: space-evenly;
     flex-flow: wrap;
-    font-size: 1.3em;
+    font-size: 2.4em;
+    margin: 10px;
 }
 .footerText{
     font-family: 'Montserrat', sans-serif;

@@ -33,8 +33,8 @@ class Skills extends Component {
 
                 <p>
                     <span>design skills:</span><br></br>
-                    <img className="skillsImages" src={bootStrap} alt="Boot Strap"/>
-                    <img className="skillsImages" src={materialDesign} alt="Material Design"/>
+                    {/* <img className="skillsImages" src={bootStrap} alt="Boot Strap"/>
+                    <img className="skillsImages" src={materialDesign} alt="Material Design"/> */}
                     <img className="skillsImages" src={photoShop} alt="Adobe Photoshop"/>
                     <img className="skillsImages" src={lightRoom} alt="Adobe Light Room"/>
                     <img className="skillsImages" src={premier} alt="Premier"/> 

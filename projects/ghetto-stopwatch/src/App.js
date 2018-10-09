@@ -1,5 +1,6 @@
 import React from 'react'
 import Controls from './components/Controls'
+
 import Display from './components/Display'
 import './styles.css'
 
@@ -12,7 +13,7 @@ const App = () => {
             
             <span>Stopwatch</span></div>
             <Display />
-            <Controls />
+            <Controls/>
         </div>
     )
 }

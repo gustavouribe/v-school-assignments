@@ -18,13 +18,13 @@ class Skills extends Component {
             <div className="skills">
              
                 <p>
-                    <span>preferred environment:</span><br></br>
+                    <h3>preferred environment:</h3>
                     <img className="skillsImages" src={linuxMint} alt="Linux Mint"/>
                     <img className="skillsImages" src={react} alt="React"/>
                     <img className="skillsImages" src={VSCode} alt="VS Code"/>
                 </p>
                 <p>
-                    <span>web dev toolkit:</span><br></br>
+                    <h3>web dev toolkit:</h3>
                     <img className="skillsImages" src={html} alt="html"/>
                     <img className="skillsImages" src={css} alt="css"/>
                     <img className="skillsImages" src={javaScript} alt="Java Script"/>
@@ -32,7 +32,7 @@ class Skills extends Component {
                 </p>
 
                 <p>
-                    <span>design skills:</span><br></br>
+                    <h3>design skills:</h3>
                     {/* <img className="skillsImages" src={bootStrap} alt="Boot Strap"/>
                     <img className="skillsImages" src={materialDesign} alt="Material Design"/> */}
                     <img className="skillsImages" src={photoShop} alt="Adobe Photoshop"/>

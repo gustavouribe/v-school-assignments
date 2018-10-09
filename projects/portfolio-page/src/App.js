@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
+import About from './components/About';
 import Education from './components/Education'
 import Skills from './components/Skills'
 import Footer from './components/Footer'
@@ -11,6 +12,7 @@ class App extends Component {
         return (
             <div className="container">
                 <Header/>
+                <About/>
                 <Content/>
                 <Skills/>
                 <Education/>

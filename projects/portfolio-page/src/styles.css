@@ -1,183 +1,252 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
-
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700");
 
 body {
-    background-color: black;
-    margin: 0;
- }
- 
-
-
-
-.container{
-    background-color: black;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-}
-.header{
-    
-}
-.titleFont{
-    display: flex;
-    justify-content: flex-end;
-    font-family: 'PT Sans', sans-serif;
-    font-size: 7em; 
-    letter-spacing: 10px;
-    margin-bottom: 10px;  
-    
+  background-color: black;
+  margin: 0;
 }
 
-@media only screen and (max-width: 750px){
-    .titleFont{
-        font-size: 6em; 
-        margin-bottom: 5px;  
-    }
+.container {
+  background-color: black;
+  color: white;
+  font-family: "Montserrat", sans-serif;
 }
-@media only screen and (max-width: 680px){
-    .titleFont{
-        font-size: 5em; 
-    }
+.header {
 }
-@media only screen and (max-width: 580px){
-    .titleFont{
-        font-size: 4em; 
-    }
+.titleFont {
+  display: flex;
+  justify-content: flex-end;
+  font-family: "PT Sans", sans-serif;
+  font-size: 7em;
+  letter-spacing: 10px;
+  margin-bottom: 10px;
 }
 
-
-
-.subTitleFont{
-    display: flex;
-    justify-content: flex-start;
-    font-family: 'PT Sans', sans-serif;
-    letter-spacing: 10px;
-    padding-left: 10px;
-    /* font-size: 7em;    */
-    
+@media only screen and (max-width: 850px) {
+  .titleFont {
+    font-size: 6em;
+    margin-bottom: 5px;
+  }
 }
+@media only screen and (max-width: 750px) {
+  .titleFont {
+    font-size: 5em;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .titleFont {
+    font-size: 4em;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .titleFont {
+    font-size: 2.7em;
+  }
+}
+
+.subTitleFont {
+  display: flex;
+  justify-content: flex-start;
+  font-family: "PT Sans", sans-serif;
+  letter-spacing: 10px;
+  padding-left: 10px;
+  font-size: 1.2em;
+}
+.subTitleFont a:link,
+a:visited,
+a:active {
+  color: red;
+  text-decoration: none;
+}
+
+.subTitleFont a:hover {
+  color: red;
+  text-decoration: none;
+  font-size: 110%;
+}
+
+/* //////////////////////////////////////////////////////////////////// ABOUT */
+
+.about {
+  padding-top: 40px;
+  /* display: flex;
+  flex-direction: row; */
+  /* justify-content: center; */
+  /* flex-wrap: wrap; */
+  /* width: 1000px; */
+  display: grid;
+  grid-template-columns: 400px 250px 250px 250px;
+  justify-content: center;
+  grid-gap: 30px;
+  margin: auto;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+}
+.about p {
+  margin-top: 0px;
+}
+.aboutImg {
+  height: 350px;
+  padding-right: 90px;
+}
+@media only screen and (max-width: 1300px) {
+  .about {
+    grid-template-columns: 400px 250px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .about {
+    grid-template-columns: 600px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .about {
+    grid-template-columns: 300px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .aboutImg {
+    height: 300px;
+  }
+}
+
 /* //////////////////////////////////////////////////////////////////// CONTENT */
 
-
-.contentWrapper{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly; 
-     margin: auto;
-   
+.contentWrapper {
+  padding-top: 70px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: auto;
 }
 
-.contentBlock{
-     width: 300px; 
+.contentBlock {
+  width: 300px;
+  text-align: center;
+}
+.contentBlock h3 {
+  margin: 3px;
 }
 
-.contentImages{
-    background-color: white;
-    width: 250px;
-    height: 200px;
-    border-radius: 25px;
+.contentImages {
+  background-color: white;
+  width: 250px;
+  height: 200px;
+  border-radius: 25px;
 }
-
-
-
-
-
-
-
-
-
+.contentImages:hover {
+  width: 260px;
+  height: 210px;
+}
 
 /* //////////////////////////////////////////////////////////////////// SKILLS */
 
-
-
-.skills{
-    display: flex;
-    flex-flow: wrap;
-    justify-content: space-evenly;
-    margin: 10px;
-    text-align: center;
+.skills {
+  padding-top: 70px;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-evenly;
+  margin: 10px;
+  text-align: center;
 }
-@media only screen and (max-width: 580px){
-    .skills{
-        margin: 3px; 
-    }
-}
-.skillsImages{
-    width: 50px;
-    height: 50px;
+.skills h3 {
+  margin: 5px;
 }
 
-
+@media only screen and (max-width: 580px) {
+  .skills {
+    margin: 3px;
+  }
+}
+.skillsImages {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+}
 
 /* //////////////////////////////////////////////////////////////////// EDUCATION */
 
-.eduWrapper{
-    display: flex;
-    justify-content: center;
-    /* margin: auto; */
-   
+.eduWrapper {
+  padding-top: 70px;
+  display: flex;
+  justify-content: center;
+  /* margin: auto; */
 }
 
-.eduBlock{
-    width: 300px;
+.eduBlock {
+  width: 330px;
+  padding: 10px;
 }
 
-.eduImages{
-    background-color: white;
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
+.eduBlock h4 {
+  margin-top: 2px;
+  margin-bottom: 5px;
 }
 
-@media only screen and (min-width: 500px) and (max-width: 700px){
-    .eduBlock{
-        width: 200px;
-    }
+.eduImages {
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
 }
 
+@media only screen and (min-width: 500px) and (max-width: 700px) {
+  .eduBlock {
+    width: 200px;
+  }
+}
 
-@media only screen and (max-width: 500px){
-    .eduWrapper{
-        flex-direction: column;
-        margin: 10%;
-    }
+@media only screen and (max-width: 500px) {
+  .eduWrapper {
+    flex-direction: column;
+    margin: 5%;
+  }
 }
 
 /* //////////////////////////////////////////////////////////////////// FOOTER */
 
+.footerIcons {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: wrap;
+  font-size: 2.4em;
+  margin: 10px;
+}
+.footerIcons a:visited {
+  color: white;
+}
+.footerIcons a:hover {
+  color: red;
+  font-size: 110%;
+}
+.footerText {
+  padding-top: 70px;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: wrap;
+  font-size: 1.3em;
+}
 
-.footerIcons{
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    justify-content: space-evenly;
-    flex-flow: wrap;
-    font-size: 2.4em;
-    margin: 10px;
+@media only screen and (max-width: 600px) {
+  .footerText {
+    flex-direction: column;
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 1.1em;
+  }
 }
-.footerText{
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    justify-content: space-evenly;
-    flex-flow: wrap;
-    font-size: 1.3em;
-}
-
-@media only screen and (max-width: 600px){
-    .footerText{
-        flex-direction: column;
-        margin-left: 15%;
-        margin-right: 15%;
-        font-size: 1.1em;
-    }
-}
-@media only screen and (max-width: 400px){
-    .footerText{
-        flex-direction: column;
-        margin-left: 15%;
-        margin-right: 15%;        
-        font-size: 1em;
-    }
+@media only screen and (max-width: 400px) {
+  .footerText {
+    flex-direction: column;
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 1em;
+  }
 }

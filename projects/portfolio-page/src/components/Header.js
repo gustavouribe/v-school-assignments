@@ -7,7 +7,7 @@ class Header extends Component {
                 <p className="titleFont"><b>CHOLO 3000</b></p>
                 {/* <p className="titleFont"><b>3000</b></p> */}
           
-                <div className="subTitleFont"><p>The web dev portfolio page for: <a href="http://gustavoadolfouribe.com/">Gustavo Adolfo Uribe</a></p></div> 
+                <div className="subTitleFont"><p>The web dev portfolio page for: <a href="http://gustavoadolfouribe.com/" target="_blank" rel="noopener noreferrer">Gustavo Adolfo Uribe</a></p></div> 
 
             </div>
         );

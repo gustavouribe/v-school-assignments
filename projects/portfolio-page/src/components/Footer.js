@@ -10,10 +10,10 @@ class Footer extends Component {
                     <span><i class="far fa-envelope"></i>GustavoAUribe1985@gmail.com</span>
                 </div>
                 <div className="footerIcons">   
-                    <i class="fab fa-github"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-youtube-square"></i>
-                    <i class="fab fa-linkedin"></i>
+                    <a href="https://github.com/gustavouribe" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/gaumusic/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/channel/UCHh9vuUvxBf5BZlKees1X5A" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube-square"></i></a>
+                    <a href="https://www.linkedin.com/in/gustavo-adolfo-uribe/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
         );
